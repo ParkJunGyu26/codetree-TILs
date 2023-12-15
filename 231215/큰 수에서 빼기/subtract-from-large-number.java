@@ -10,11 +10,10 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        if (a >=b) {
+        if (a-b < 0) {
+            System.out.println((a-b) * -1);
+        } else {
             System.out.println(a-b);
-        }
-        if (a <= b) {
-            System.out.println(b-a);
         }
     }
 }
