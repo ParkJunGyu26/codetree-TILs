@@ -13,7 +13,7 @@ public class Main {
                 if(i % 5 == 0) sum += i;
             }
         } else {
-            for (int i = b; i <= a; i++) {
+            for (int i = b; i >= a; i--) {
                 if(i % 5 == 0) sum += i;
             }
         }
