@@ -10,8 +10,8 @@ public class Main {
         c = sc.nextInt();
         boolean satisfied = true;
         for (int i = a; i <= b; i++) {
-            if (i % c != 0) satisfied = false;
+            if (i % c == 0) satisfied = false;
         }
-        System.out.print(satisfied == false ? "YES" : "NO");
+        System.out.print(satisfied == false ? "NO" : "YES");
     }
 }
