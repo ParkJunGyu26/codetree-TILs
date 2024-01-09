@@ -1,23 +1,22 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
+
+        // 변수 선언 및 입력
         int n = sc.nextInt();
         int cnt = 0;
 
-        for (int i = 1 ; i <= n; i++) {
-            if (i % 2 == 1) {
-                for (int j = 1; j <= n; j++) {
+        // 값을 조건대로 증가시켜 출력합니다.
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(i % 2 == 0)
                     cnt++;
-                    System.out.print(cnt + " ");
-                }
-            } else {
-                for (int j = 1; j <= n; j++) {
+                else
                     cnt += 2;
-                    System.out.print(cnt + " ");
-                }
+                
+                System.out.print(cnt + " ");
             }
             System.out.println();
         }
