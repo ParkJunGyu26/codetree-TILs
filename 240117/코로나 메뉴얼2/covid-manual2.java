@@ -15,7 +15,7 @@ public class Main {
                 if (temp >= 37) arr[1]++;
                 else arr[3]++; 
             } else {
-                if (temp > 37) {
+                if (temp >= 37) {
                     arr[0]++;
                     cnt++;
                 }
