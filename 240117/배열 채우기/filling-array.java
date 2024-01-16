@@ -8,17 +8,16 @@ public class Main {
         int cnt = 0;
 
         for (int i = 0; i < 10; i++) {
-            arr[i] = sc.nextInt();
-            if (arr[i] == 0) {
+            int num = sc.nextInt();
+            if (num == 0) break;
+            else {
+                arr[i] = num;
                 cnt += 1;
-                break;
-            };
-            cnt += 1;
+            }
         }
 
 
-        for (int i = 0; i <= cnt; i++) {
-            if (arr[cnt - i] == 0) continue;
+        for (int i = 1; i <= cnt; i++) {
             System.out.print(arr[cnt - i] + " ");
         }
     }
