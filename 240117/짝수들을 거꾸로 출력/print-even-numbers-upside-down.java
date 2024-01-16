@@ -8,13 +8,11 @@ public class Main {
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
-            int num = sc.nextInt();
-            if (num % 2 == 0) arr[i] = num;
+            arr[i] = sc.nextInt();
         }
 
         for (int i = 1; i <= n; i++) {
-            if (arr[n-i] == 0) continue;
-            System.out.print(arr[n-i] + " ");
+            if (arr[n - i] % 2 == 0) System.out.print(arr[n - i] + " ");
         }
     }
 }
