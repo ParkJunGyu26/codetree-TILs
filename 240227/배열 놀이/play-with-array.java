@@ -38,6 +38,7 @@ public class Main {
                 for (int j = a-1; j < b; j++) {
                     System.out.print(intArray[j] + " ");
                 }
+                System.out.println();
             }
         }
     }
