@@ -9,9 +9,12 @@ public class Main {
         n = sc.nextInt();
         m = sc.nextInt();
 
+        // 정수 배열 100개 선언
+        int[] arr = new int[100];
+
         for (int i = 0; i < n; i++) {
-            int num = sc.nextInt();
-            if (num == m) {
+            arr[i] = sc.nextInt();
+            if (arr[i] == m) {
                 cnt++;
             }
         }
