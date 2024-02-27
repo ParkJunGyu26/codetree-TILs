@@ -7,6 +7,7 @@ public class Main {
         int n1, n2;
         n1 = sc.nextInt();
         n2 = sc.nextInt();
+
         int[] A = new int[n1];
         int[] B = new int[n2];
 
@@ -18,21 +19,25 @@ public class Main {
             B[i] = sc.nextInt();
         }
 
-        boolean check = false;
-        // 두 배열 비교
+        int check = 0;
+        int cnt = 0;
+        boolean ans = false;
+
         for (int i = 0; i < n1; i++) {
-            for (int j = 0; j < n2; j++) {
-                if (A[i] != B[j]) {
-                    check = false;
-                    break;
-                }
-                if (A[i] == B[j]) {
-                    check = true;
-                }
+            if (A[i] == B[check]) {
+                check++;
+                cnt++;
+            } else {
+                check = 0;
+                cnt = 0;
             }
-            if (check == true) break;
+
+            if (cnt == n2) {
+                ans = true;
+                break;
+            }
         }
 
-        System.out.print(check == true ? "Yes" : "No");
+        System.out.print(ans == true ? "Yes" : "No");
     }
 }
