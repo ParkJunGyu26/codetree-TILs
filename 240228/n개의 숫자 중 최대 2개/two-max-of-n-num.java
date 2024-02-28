@@ -11,7 +11,7 @@ public class Main {
             nums[i] = sc.nextInt();
         }
 
-        int firstMax = nums[0];
+        int firstMax = Integer.MIN_VALUE;
         int check = 0;
 
         for(int i = 0; i < n; i++) {
@@ -21,7 +21,7 @@ public class Main {
             }
         }
 
-        int secondMax = nums[0];
+        int secondMax = Integer.MIN_VALUE;
 
         for (int i = 0; i < n; i++) {
             if (check == i) continue;
