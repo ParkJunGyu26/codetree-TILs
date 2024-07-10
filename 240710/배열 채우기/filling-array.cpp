@@ -3,7 +3,8 @@ using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    int n, cnt, num[10];
+    int n, num[10];
+    int cnt = 10;
     for (int i = 0; i < 10; i++) {
         cin >> n;
         if (n == 0) {
