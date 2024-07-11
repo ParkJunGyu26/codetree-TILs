@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
     int MIN = 1000;
-    int MAX = 1000;
+    int MAX = -1000;
     int num[10];
 
     for (int i = 0; i < 10; i++)
@@ -19,7 +19,7 @@ int main() {
                 min_ans = num[i];
             } 
         } else {
-            if (num[i] - 500 < MAX) {
+            if (500 - num[i] > MAX) {
                 MAX = 500 - num[i];
                 max_ans = num[i];
             }
