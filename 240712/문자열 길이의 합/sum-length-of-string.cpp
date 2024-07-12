@@ -14,13 +14,7 @@ int main() {
         cin >> A;
         cnt += A.length();
         bool check = false;
-        for (auto a : A) {
-            if (a == 'a') {
-                check = true;
-                break;
-            }
-        }
-        if (check) ans++;
+        if (A[0] == 'a') ans++;
     }
 
     cout << cnt << " " << ans;
