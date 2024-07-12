@@ -12,9 +12,15 @@ int main() {
 
     cin >> a;
 
+    bool check = false;
     for (auto aa : A) {
-        if (aa[aa.length()-1] == a) cout << aa << endl;
+        if (aa[aa.length()-1] == a) {
+            cout << aa << endl;
+            check = true;
+        }
     }
+
+    if (!check) cout << "None";
 
     return 0;
 }
