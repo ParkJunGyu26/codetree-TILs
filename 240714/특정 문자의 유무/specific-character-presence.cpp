@@ -10,45 +10,41 @@ int main() {
 
     // ee
     string check1 = "ee";
-    bool c1 = false;
+    int c1 = 0;
     index = 0;
     int size = A.length();
     for (auto c : check1) {
         for (int i = index; i < size; i++) {
             if (c == A[i]) {
-                c1 = true;
+                c1++;
                 index = i+1;
                 size = index+1;
                 break;
-            } else {
-                c1 = false;
             }
         }
     }
 
     // ab
     string check2 = "ab";
-    bool c2 = false;
+    int c2 = 0;
     index = 0;
     size = A.length();
     for (auto c : check2) {
         for (int i = index; i < size; i++) {
             if (c == A[i]) {
-                c2 = true;
+                c2++;
                 index = i+1;
                 size = index+1;
                 break;
-            } else {
-                c2 = false;
             }
         }
     }
 
     string ans1, ans2;
-    if (c1 == true) ans1 = "Yes";
+    if (c1 == 2) ans1 = "Yes";
     else ans1 = "No";
 
-    if (c2 == true) ans2 = "Yes";
+    if (c2 == 2) ans2 = "Yes";
     else ans2 = "No";
 
     cout << ans1 << " " << ans2;
