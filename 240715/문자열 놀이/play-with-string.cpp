@@ -1,26 +1,31 @@
 #include <iostream>
 #include <string>
-#include <typeinfo>
 using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
     string S;
     int q;
-    
-    cin >> S >> q;
 
+    cin >> S >> q;
     for (int i = 0; i < q; i++) {
-        char command[3];
-        for (int j = 0; j < 3; j++) cin >> command[j];
-        
-        if (command[0] == '1') {
-            char tmp = S[(command[1]-'0')-1];
-            S[(command[1]-'0')-1] = S[(command[2]-'0')-1];
-            S[(command[2]-'0')-1] = tmp;
-        } else {
+        int command;
+        cin >> command;
+        if (command == 1) {
+            int num[2];
+            for (int j = 0; j < 2; j++) cin >> num[j];
+
             for (int j = 0; j < S.length(); j++) {
-                if (S[j] == command[1]) S[j] = command[2];
+                char tmp = S[num[0]-1];
+                S[num[0]-1] = S[num[1]-1];
+                S[num[1]-1] = tmp;
+            }
+        } else {
+            char ch[2];
+            for (int j = 0; j < 2; j++) cin >> ch[j];
+
+            for (int j = 0; j < S.length(); j++) {
+                if (S[j] == ch[0]) S[j] = ch[1];
             }
         }
         cout << S << endl;
