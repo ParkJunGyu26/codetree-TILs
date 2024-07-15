@@ -15,11 +15,10 @@ int main() {
             int num[2];
             for (int j = 0; j < 2; j++) cin >> num[j];
 
-            for (int j = 0; j < S.length(); j++) {
-                char tmp = S[num[0]-1];
-                S[num[0]-1] = S[num[1]-1];
-                S[num[1]-1] = tmp;
-            }
+            char tmp = S[num[0]-1];
+            S[num[0]-1] = S[num[1]-1];
+            S[num[1]-1] = tmp;
+            
         } else {
             char ch[2];
             for (int j = 0; j < 2; j++) cin >> ch[j];
