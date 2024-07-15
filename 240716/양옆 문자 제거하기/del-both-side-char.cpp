@@ -7,7 +7,7 @@ int main() {
     string A;
     cin >> A;
 
-    A = A.substr(0, 2) + A.substr(3);
+    A = A.substr(0, 1) + A.substr(2);
     A = A.substr(0, A.length()-2) + A.substr(A.length()-1);
     cout << A;
     return 0;
