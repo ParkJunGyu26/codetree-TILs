@@ -11,6 +11,9 @@ int main() {
     string ans2 = "";
     for (int i = 0; i < A.size(); i++) {
         if ('0' <= A[i] && A[i] <= '9') ans1 += A[i];
+    }
+
+    for (int i = 0; i < B.size(); i++) {
         if ('0' <= B[i] && B[i] <= '9') ans2 += B[i];
     }
 
