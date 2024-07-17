@@ -9,7 +9,7 @@ int main() {
     int ans = (int)a + 1;
     if (ans > 123) ans = 99;
 
-    cout << (char) ans;
+    cout << (char)ans;
 
     return 0;
 }
