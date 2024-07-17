@@ -7,8 +7,7 @@ int main() {
     cin >> a;
 
     int ans = (int)a + 1;
-    if (ans > 123) ans = 99;
-
+    if (ans == 122) ans = 97;
     cout << (char)ans;
 
     return 0;
