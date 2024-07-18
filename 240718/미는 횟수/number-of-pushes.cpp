@@ -8,13 +8,15 @@ int main() {
     cin >> A >> B;
 
     int n = 0;
-    
-    while (A != B) {
+
+    for (int i = 0; i < 100; i++) {
+        if (A == B) break;
         A = A.substr(A.size()-1, 1) + A.substr(0, A.size()-1);
         n++;
     }
-
-    cout << n;
+    
+    if (n == 0) cout << -1;
+    else cout << n;
 
     return 0;
 }
