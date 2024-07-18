@@ -9,13 +9,14 @@ int main() {
 
     int n = 0;
 
-    for (int i = 0; i < 100; i++) {
+    int l = A.size();
+    for (int i = 0; i < l; i++) {
         if (A == B) break;
-        A = A.substr(A.size()-1, 1) + A.substr(0, A.size()-1);
+        A = A.substr(l-1, 1) + A.substr(0, l-1);
         n++;
     }
     
-    if (n == 0) cout << -1;
+    if (n == l) cout << -1;
     else cout << n;
 
     return 0;
