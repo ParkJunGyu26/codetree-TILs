@@ -10,7 +10,7 @@ bool check(int n) {
         cnt += num[i] - '0';
     }
 
-    return cnt % 2 == 0 && cnt % 5 == 0;
+    return n % 2 == 0 && cnt % 5 == 0;
 }
 
 int main() {
