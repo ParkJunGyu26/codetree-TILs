@@ -10,7 +10,8 @@ bool check(int M, int D) {
             if (1 <= D && D <= 30) return true;
         case 2:
             if (1 <= D && D <= 28) return true;
-        return false;
+        default:
+            return false;
     }
 }
 
