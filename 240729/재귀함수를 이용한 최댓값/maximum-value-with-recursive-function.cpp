@@ -7,7 +7,7 @@ int n;
 int A[MAX_SIZE];
 
 int solution(int index, int answer) {
-    if (index == n-1) return answer;
+    if (index == n) return answer;
 
     if (A[index] >= answer) answer = A[index];
     
