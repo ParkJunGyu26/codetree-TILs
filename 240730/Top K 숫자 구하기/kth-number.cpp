@@ -6,6 +6,8 @@ using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
+    ios::sync_with_stdio(false); 
+    cin.tie(NULL);
     int k, N;
     int A[MAX_SIZE];
 
