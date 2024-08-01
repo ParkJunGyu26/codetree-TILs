@@ -14,7 +14,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         string target;
         cin >> target;
-        if (target.find(T) != string::npos) {
+        if (target.find(T) == 0) {
             A[index++] = target;
         }
     }
