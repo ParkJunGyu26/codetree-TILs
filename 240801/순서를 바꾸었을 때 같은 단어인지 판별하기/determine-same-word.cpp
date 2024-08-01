@@ -11,10 +11,9 @@ int main() {
     sort(a.begin(), a.end());
     sort(b.begin(), b.end());
 
-    bool check = false;
+    bool check = true;
     for (int i = 0; i < max(a.size(), b.size()); i++) {
-        check = false;
-        if (a[i] == b[i]) check = true;
+        if (a[i] != b[i]) check = false;
     }
 
     if (check) cout << "Yes";
