@@ -12,7 +12,7 @@ int main() {
     sort(b.begin(), b.end());
 
     bool check = false;
-    for (int i = 0; i < a.size(); i++) {
+    for (int i = 0; i < max(a.size(), b.size()); i++) {
         check = false;
         if (a[i] == b[i]) check = true;
     }
