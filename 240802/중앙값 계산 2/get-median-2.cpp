@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> A[i];
         if (i % 2 == 0) {
-            sort(A, A+i);
+            sort(A, A+i+1);
             cout << A[i/2] << " ";
         }
     }
