@@ -27,7 +27,8 @@ bool cmp2(Person a, Person b) {
 
 void print(Person person[], int size) {
     for (int i = 0; i < size; i++) {
-        cout << person[i].name << " " << person[i].height << " " << person[i].weight << "\n";
+        printf("%s %d %.1f", person[i].name.c_str(), person[i].height, person[i].weight);
+        cout << "\n";
     }
     cout << "\n";
 }
