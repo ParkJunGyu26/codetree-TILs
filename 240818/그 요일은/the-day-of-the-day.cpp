@@ -7,7 +7,7 @@ int main() {
     int m1, d1, m2, d2;
     string A;
 
-    int month[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int month[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     string days[7] = {"Mon", "Tue", "Wed", "Thu", "Fir", "Sat", "Sun"};
 
     cin >> m1 >> d1 >> m2 >> d2 >> A;
@@ -33,9 +33,8 @@ int main() {
     int answer = 0;
 
     int target = after - before;
-    if (target >= 7) answer++;
 
-    while (target > 7) {
+    while (target >= 7) {
         answer++;
         target -= 7;
     }
