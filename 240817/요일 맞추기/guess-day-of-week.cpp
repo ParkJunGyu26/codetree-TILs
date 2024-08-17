@@ -19,6 +19,9 @@ int main() {
     day2 += d2;
 
     if (day2-day1 >= 0) cout << days[(day2-day1)%7];
-    else cout << days[(day2-day1+7)%7];
+    else {
+        int target = -((day2-day1)/7)+1;
+        cout << days[(day2-day1+7*target)%7];
+    }
     return 0;
 }
