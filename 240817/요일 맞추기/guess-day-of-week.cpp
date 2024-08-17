@@ -18,9 +18,7 @@ int main() {
     for (int i = 1; i < m2; i++) day2 += month[i];
     day2 += d2;
 
-    // cout << day1-day2 << "\n";
-
-    if (day2-day1 >= 0) cout << days[day2-day1];
-    else cout << days[day2-day1+7];
+    if (day2-day1 >= 0) cout << days[(day2-day1)%7];
+    else cout << days[(day2-day1+7)%7];
     return 0;
 }
