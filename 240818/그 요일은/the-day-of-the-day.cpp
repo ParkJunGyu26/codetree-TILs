@@ -35,7 +35,7 @@ int main() {
     int target = after - before;
     if (target >= 7) answer++;
 
-    while (target >= 7) {
+    while (target > 7) {
         answer++;
         target -= 7;
     }
