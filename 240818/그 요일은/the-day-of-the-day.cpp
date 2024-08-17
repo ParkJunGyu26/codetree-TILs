@@ -8,7 +8,7 @@ int main() {
     string A;
 
     int month[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    string days[7] = {"Mon", "Tue", "Wed", "Thu", "Fir", "Sat", "Sun"};
+    string days[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
     cin >> m1 >> d1 >> m2 >> d2 >> A;
     int before, after;
