@@ -19,7 +19,7 @@ int main() {
             for (int j = now; j < now+cnt; j++) points[j]++;
             now += cnt;
         } else {
-            for (int j = now; j > now-cnt; j--) points[j]++;
+            for (int j = now-cnt; j < now; j++) points[j]++;
             now -= cnt;
         }
     }
