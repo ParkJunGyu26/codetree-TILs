@@ -27,8 +27,8 @@ int main() {
 
     // 두 번째 사각형
     cin >> x1 >> y1 >> x2 >> y2;
-    for (int y = y1; y <= y2; y++) {
-        for (int x = x1; x <= x2; x++) {
+    for (int y = y1; y < y2; y++) {
+        for (int x = x1; x < x2; x++) {
             rec2[y+1000][x+1000] = -1;
         }
     }
@@ -50,8 +50,13 @@ int main() {
         }
     }
 
+    // cout << "max x : " << max_x << endl;
+    // cout << "min x : " << min_x << endl;
+    // cout << "max y : " << max_y << endl;
+    // cout << "min y : " << min_y << endl;
+
     if (check) cout << (max_x - min_x) * (max_y - min_y);
     else cout << 0;
-    
+
     return 0;
 }
