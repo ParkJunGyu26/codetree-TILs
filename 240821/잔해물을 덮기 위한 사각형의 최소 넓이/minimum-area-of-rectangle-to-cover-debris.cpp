@@ -35,16 +35,16 @@ int main() {
         bool target_y = false;
         int target_x = 0;
         for (int x = 0; x < 2001; x++) {
-            if (rec1[y][x] == 1) {
+            if (rec1[y][x] == 1 && rec2[y][x] != -1) {
                 target_y = true;
-                if (rec2[y][x] != -1) target_x++;
+                target_x++;
             }
         }
         if (target_y) answer_y++;
         answer_x = max(answer_x, target_x);
     }
 
-    cout << answer_y * answer_x;
+    cout << answer_x * answer_y;
 
     return 0;
 }
