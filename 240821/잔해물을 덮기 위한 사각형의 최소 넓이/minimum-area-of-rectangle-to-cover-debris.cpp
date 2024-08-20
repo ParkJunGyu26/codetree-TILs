@@ -37,9 +37,11 @@ int main() {
     max_x = max_y = 0;
     min_x = min_y = 2000;
 
+    bool check = false;
     for (int y = 0; y < 2001; y++) {
         for (int x = 0; x < 2001; x++) {
             if (rec1[y][x] == 1 && rec2[y][x] != -1) {
+                check = true;
                 max_x = max(x, max_x);
                 max_y = max(y, max_y);
                 min_x = min(x, min_x);
@@ -48,12 +50,8 @@ int main() {
         }
     }
 
-    // cout << "max x : " << max_x << endl;
-    // cout << "min x : " << min_x << endl;
-    // cout << "max y : " << max_y << endl;
-    // cout << "min y : " << min_y << endl;
-
-    cout << (max_x - min_x) * (max_y - min_y);
-
+    if (check) cout << (max_x - min_x) * (max_y - min_y);
+    else cout << 0;
+    
     return 0;
 }
