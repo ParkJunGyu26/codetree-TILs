@@ -15,7 +15,7 @@ int main() {
     for (int i = 0; i < n; i++)
         cin >> num[i];
 
-    int answer = 0;
+    int answer = 1;
     int cnt = 1;
     for (int i = 1; i < n; i++) {
         if (num[i-1] == num[i]) cnt++;
