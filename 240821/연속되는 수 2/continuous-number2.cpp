@@ -21,6 +21,7 @@ int main() {
         if (num[i-1] == num[i]) cnt++;
         if (num[i-1] != num[i] || i == n-1) {
             answer = max(cnt, answer);
+            cnt = 1;
         }
     }
 
