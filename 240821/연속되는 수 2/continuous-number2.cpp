@@ -19,7 +19,7 @@ int main() {
     int cnt = 1;
     for (int i = 1; i < n; i++) {
         if (num[i-1] == num[i]) cnt++;
-        else {
+        if (num[i-1] != num[i] || i == n-1) {
             answer = max(cnt, answer);
         }
     }
