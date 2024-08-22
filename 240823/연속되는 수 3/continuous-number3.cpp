@@ -17,10 +17,11 @@ int main() {
     for (int i = 1; i < n; i++) {
         if (target * num[i] > 0) cnt++;
         else {
-            target = num[i];
             ans = max(ans, cnt);
+            target = num[i];
             cnt = 1;
         }
+        if (i == n-1) ans = max(ans, cnt);
     }
 
     cout << ans;
