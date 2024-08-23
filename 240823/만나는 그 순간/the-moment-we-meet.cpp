@@ -49,12 +49,18 @@ int main() {
         time += c;
     }
 
+    bool check = false;
+    int ans = 0;
     for (int i = 1; i < time; i++) {
         if (A[i] == B[i]) {
-            cout << i;
+            ans = i;
+            check = true;
             break;
         }
     }
+
+    if (check) cout << ans;
+    else cout << -1;
 
     return 0;
 }
