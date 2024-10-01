@@ -38,25 +38,22 @@ int main() {
         // 둘 중 하나만 감염자 경우
         // 둘 다 감염자 경우
         // 둘 다 비감염자 경우
-        
-        if (person[p1] == 1 && hand[p1] > 0) {
-            if (person[p2] != 1) { // p1만 감염자 경우
-                person[p2] = 1;
-            }
-            if (person[p2] == 1 && hand[p2] > 0) { // 둘 다 감염자 경우
-                hand[p2]--;
-                check = true;
-            }
-            hand[p1]--;
+        if (person[p1] == 1 && person[p2] == 1) {
+            if (hand[p1] > 0) hand[p1]--;
+            if (hand[p2] > 0 ) hand[p2]--;
+            check = true;
         }
-
+        
         if (check) continue;
 
-        if (person[p2] == 1 && hand[p2] > 0) {
-            if (person[p1] != 1) {
-                person[p1] = 1;
-                hand[p2]--;
-            }
+        if (person[p1] == 1 && hand[p1] > 0 && person[p2] != 1) {
+            hand[p1]--;
+            person[p2] = 1;
+        }
+
+        if (person[p2] == 1 && hand[p2] > 0 && person[p1] != 1) {
+            hand[p2]--;
+            person[p1] = 1;
         }
     }
 
