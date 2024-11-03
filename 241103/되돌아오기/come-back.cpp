@@ -1,9 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// 최대 1000까지 이동 가능 -> (0, 0) 중점이 (1000, 1000) 이라고 생각해야됨.
-int graph[2001][2001];
-
+//          동  서  남  북
 int dx[4] = {1, -1, 0, 0};
 int dy[4] = {0, 0, 1, -1};
 
@@ -13,8 +11,8 @@ int main() {
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int now_x, now_y;
-    now_x = now_y = 1000;
+    int x, y;
+    x = y = 0;
 
     int n;
     cin >> n;
@@ -36,18 +34,18 @@ int main() {
         else dir = 2;
 
         for (int j = 0; j < dist; j++) {
-            now_x += dx[dir];
-            now_y += dy[dir];
             time++;
+            x += dx[dir];
+            y += dy[dir];
 
-            if (now_x == 1000 && now_y == 1000) {
+            if (x == 0 && y == 0) {
                 answer = time;
                 break;
             }
         }
     }
 
-    cout << time;
+    cout << answer;
 
     return 0;
 }
